@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario do Advogado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card wide-card">
+      <h1>Formulario do advogado</h1>
+      <p class="muted">Preencha os dados e envie o documento para analise do administrador.</p>
+
+      <form class="form-stack" id="advogado-form">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" placeholder="Digite o nome completo" required>
+
+        <label for="oab">Numero da OAB</label>
+        <input id="oab" name="oab" type="text" placeholder="Digite o numero da OAB" required>
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" placeholder="Digite o CPF" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="Digite o e-mail" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="text" placeholder="Digite o telefone" required>
+
+        <label for="documento">Anexo de documento</label>
+        <input id="documento" name="documento" type="file" required>
+
+        <div class="button-row">
+          <button type="submit">Enviar formulario</button>
+          <a class="secondary-button" href="status.html">Ver status</a>
+        </div>
+      </form>
+
+      <div class="button-row top-space">
+        <a class="secondary-button logout-button" href="index.html">Sair</a>
+      </div>
+
+      <p class="feedback" id="advogado-feedback"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status do Formulario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card wide-card">
+      <h1>Status do formulario</h1>
+      <p class="muted">Acompanhe aqui o retorno do administrador sobre o formulario enviado.</p>
+
+      <div class="empty-state hidden" id="status-empty">
+        Nenhum formulario foi enviado ainda.
+      </div>
+
+      <div id="status-content" class="hidden">
+        <div class="status-panel">
+          <span class="status-label">Status atual</span>
+          <span class="status-badge" id="status-badge">Aguardando analise</span>
+          <p class="status-message" id="status-message"></p>
+        </div>
+
+        <div class="details-box top-space hidden" id="status-arquivado-box">
+          <p><strong>Situação do processo:</strong> Finalizado e arquivado.</p>
+        </div>
+
+        <div class="details-box top-space">
+          <p><strong>Nome:</strong> <span id="status-nome">-</span></p>
+          <p><strong>OAB:</strong> <span id="status-oab">-</span></p>
+          <p><strong>CPF:</strong> <span id="status-cpf">-</span></p>
+          <p><strong>E-mail:</strong> <span id="status-email">-</span></p>
+          <p><strong>Telefone:</strong> <span id="status-telefone">-</span></p>
+          <p><strong>Documento:</strong> <span id="status-documento">-</span></p>
+        </div>
+
+        <div class="details-box top-space hidden" id="status-retorno-box">
+          <p><strong>Documento do administrador:</strong> <a id="status-retorno-link" href="#" download>Baixar documento</a></p>
+        </div>
+
+        <div class="details-box top-space">
+          <p><strong>Historico do formulario</strong></p>
+          <div id="status-historico" class="history-list"></div>
+        </div>
+
+        <div class="button-row top-space">
+          <a class="secondary-button" href="advogado.html">Voltar ao formulario</a>
+          <a class="secondary-button logout-button" href="index.html">Sair</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

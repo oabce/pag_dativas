@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Administrador</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card wide-card">
+      <h1>Analise do administrador</h1>
+      <p class="muted">Confira os dados enviados pelo advogado e retorne o status da solicitacao.</p>
+
+      <div class="empty-state hidden" id="admin-empty">
+        Nenhum formulario foi enviado ainda.
+      </div>
+
+      <div id="admin-content" class="hidden">
+        <div class="empty-state hidden" id="admin-archived">
+          Processo finalizado e arquivado. Nao ha mais acoes disponiveis para o administrador.
+        </div>
+
+        <div class="details-box">
+          <p><strong>Nome:</strong> <span id="admin-nome">-</span></p>
+          <p><strong>OAB:</strong> <span id="admin-oab">-</span></p>
+          <p><strong>CPF:</strong> <span id="admin-cpf">-</span></p>
+          <p><strong>E-mail:</strong> <span id="admin-email">-</span></p>
+          <p><strong>Telefone:</strong> <span id="admin-telefone">-</span></p>
+          <p><strong>Documento:</strong> <a id="admin-documento" href="#" download>Baixar anexo</a></p>
+        </div>
+
+        <form class="form-stack top-space" id="admin-form">
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+            <option value="">Selecione um status</option>
+            <option value="Deferido">Deferido</option>
+            <option value="Indeferido">Indeferido</option>
+            <option value="Pendencia">Pendencia</option>
+          </select>
+
+          <div id="mensagem-group" class="hidden">
+            <label for="mensagem">Mensagem do administrador</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Informe o motivo da pendencia"></textarea>
+          </div>
+
+          <div id="indeferido-documento-group" class="hidden">
+            <label for="indeferido-documento">Documento de retorno</label>
+            <input id="indeferido-documento" name="indeferido-documento" type="file">
+            <p class="helper-text hidden" id="indeferido-documento-atual"></p>
+          </div>
+
+          <button type="submit">Salvar status</button>
+        </form>
+
+        <p class="feedback" id="admin-feedback"></p>
+
+        <div class="button-row top-space">
+          <a class="secondary-button logout-button" href="index.html">Sair</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
